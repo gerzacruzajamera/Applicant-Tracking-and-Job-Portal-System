@@ -1,0 +1,4 @@
+<?php
+session_start();
+$config = require __DIR__ . '/../config/config.php';
+require_once __DIR__ . '/helpers.php';

@@ -1,0 +1,15 @@
+# PHP generated SQLite database
+admin/php/database/job_portal.sqlite
+
+# C# build output
+bin/
+obj/
+.vs/
+*.user
+*.suo
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
