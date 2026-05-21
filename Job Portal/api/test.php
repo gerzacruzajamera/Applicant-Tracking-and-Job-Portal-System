@@ -1,7 +1,11 @@
 <?php
+
 header('Content-Type: application/json');
-echo json_encode([
+
+$response = [
     'success' => true,
-    'message' => 'Starter API is reachable. Later commits add database-backed endpoints.',
-    'stage' => 'incomplete'
-]);
+    'message' => 'API is running successfully.',
+    'stage' => 'starter'
+];
+
+echo json_encode($response, JSON_PRETTY_PRINT);
