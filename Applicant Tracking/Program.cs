@@ -22,9 +22,11 @@ namespace ApplicantTrackingSystem
         {
             Text = "CareerLink Seeker";
             StartPosition = FormStartPosition.CenterScreen;
+            Size = new Size(900, 560);
             MinimumSize = new Size(900, 560);
             BackColor = Color.FromArgb(217, 222, 231);
 
+            // ROOT
             TableLayoutPanel root = new TableLayoutPanel();
             root.Dock = DockStyle.Fill;
             root.Padding = new Padding(24);
@@ -39,9 +41,8 @@ namespace ApplicantTrackingSystem
             // HEADER
             Panel header = new Panel();
             header.BackColor = Color.FromArgb(11, 12, 16);
+            header.Dock = DockStyle.Fill;
             header.Padding = new Padding(24);
-
-            root.Controls.Add(header, 0, 0);
 
             Label title = new Label();
             title.Text = "CareerLink Applicant Starter";
@@ -51,10 +52,12 @@ namespace ApplicantTrackingSystem
             title.Location = new Point(24, 24);
 
             header.Controls.Add(title);
+            root.Controls.Add(header, 0, 0);
 
             // CARD
             Panel card = new Panel();
             card.BackColor = Color.White;
+            card.Dock = DockStyle.Fill;
             card.Padding = new Padding(28);
 
             root.Controls.Add(card, 0, 1);
@@ -72,25 +75,28 @@ namespace ApplicantTrackingSystem
 
             card.Controls.Add(body);
 
-            // LOGIN BUTTON
+            // BUTTON (SAFE LAYOUT)
+            FlowLayoutPanel actions = new FlowLayoutPanel();
+            actions.Dock = DockStyle.Bottom;
+            actions.Height = 80;
+            actions.FlowDirection = FlowDirection.LeftToRight;
+
             Button btnLogin = new Button();
             btnLogin.Text = "Login";
             btnLogin.Size = new Size(120, 40);
-            btnLogin.Location = new Point(50, 150);
 
-            btnLogin.Click += BtnLogin_Click;
+            btnLogin.Click += (s, e) =>
+            {
+                MessageBox.Show(
+                    "Login feature is not available yet.",
+                    "Information",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+            };
 
-            card.Controls.Add(btnLogin);
-        }
-
-        private void BtnLogin_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(
-                "Login feature is not available yet.",
-                "Information",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-            );
+            actions.Controls.Add(btnLogin);
+            card.Controls.Add(actions);
         }
     }
 }
