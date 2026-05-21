@@ -1,27 +1,44 @@
 <?php
 require_once __DIR__ . '/app/bootstrap.php';
-include __DIR__ . '/views/header.php';
+
+include_once __DIR__ . '/views/header.php';
 ?>
 
 <div class="card">
-    <p class="eyebrow">Admin login placeholder</p>
-    <h1>Login page</h1>
+    <p class="eyebrow">Admin Login</p>
+    <h1>Login Page</h1>
 
     <div class="notice">
-        This starter does not authenticate yet. Commit 01 and Commit 02 add the working auth flow.
+        Please enter your admin credentials.
     </div>
 
-    <form method="POST" action="#">
-        <label>Email</label>
-        <input class="input" value="admin@example.com" readonly>
+    <form method="POST" action="dashboard.php">
 
-        <label>Password</label>
-        <input class="input" type="password" placeholder="password" readonly>
+        <label for="email">Email</label>
+        <input 
+            class="input"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter email"
+            required
+        >
 
-        <button class="primary" type="submit" disabled>
-            Login disabled in starter
+        <label for="password">Password</label>
+        <input 
+            class="input"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter password"
+            required
+        >
+
+        <button class="primary" type="submit">
+            Login
         </button>
+
     </form>
 </div>
 
-<?php include __DIR__ . '/views/footer.php'; ?>
+<?php include_once __DIR__ . '/views/footer.php'; ?>
