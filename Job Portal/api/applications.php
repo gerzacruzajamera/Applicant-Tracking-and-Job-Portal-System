@@ -6,6 +6,8 @@ header('Content-Type: application/json');
 try {
     $db = new PDO('sqlite:' . __DIR__ . '/../database/database.sqlite');
 
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
     $stmt = $db->query("SELECT * FROM applications");
     $applications = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -15,6 +17,7 @@ try {
     ]);
 } catch (Exception $e) {
     http_response_code(500);
+
     echo json_encode([
         'success' => false,
         'message' => $e->getMessage()
