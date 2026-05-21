@@ -54,7 +54,8 @@ namespace ApplicantTrackingSystem
             root.Controls.Add(card, 0, 1);
 
             Label body = new Label();
-            body.Dock = DockStyle.Fill;
+            body.Dock = DockStyle.Top;
+            body.Height = 120;
             body.Font = new Font("Segoe UI", 12, FontStyle.Regular);
             body.Text = "This is the incomplete seeker desktop starter.\n\n" +
                         "Follow COMMIT_GUIDE_STEP_BY_STEP.md in the project root.\n" +
