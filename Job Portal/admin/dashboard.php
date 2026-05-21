@@ -1,10 +1,15 @@
 <?php
 require_once __DIR__ . '/../app/bootstrap.php';
-include __DIR__ . '/../views/header.php';
+require_once __DIR__ . '/../views/header.php';
 ?>
+
 <div class="card">
     <p class="eyebrow">Admin area placeholder</p>
     <h1>Dashboard</h1>
-    <p>The real dashboard, job management, application review, user management, and SQLite counts are added in later commits.</p>
+    <p>
+        The real dashboard, job management, application review, user management,
+        and SQLite counts are added in later commits.
+    </p>
 </div>
-<?php include __DIR__ . '/../views/footer.php'; ?>
+
+<?php require_once __DIR__ . '/../views/footer.php'; ?>
