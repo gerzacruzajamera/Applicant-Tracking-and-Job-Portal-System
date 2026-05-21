@@ -11,7 +11,9 @@ namespace ApplicantTrackingSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StarterForm());
+
+            // START WITH LOGIN FORM
+            Application.Run(new LoginForm());
         }
     }
 
