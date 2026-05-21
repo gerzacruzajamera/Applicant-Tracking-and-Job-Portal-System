@@ -71,7 +71,15 @@ namespace ApplicantTrackingSystem
 
             btnLogin.Click += (s, e) =>
             {
-                new LoginForm().Show();
+                LoginForm login = new LoginForm();
+
+                login.FormClosed += (sender, args) =>
+                {
+                    this.Show();
+                };
+
+                login.Show();
+
                 this.Hide();
             };
 
