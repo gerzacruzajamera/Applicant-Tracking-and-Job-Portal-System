@@ -61,6 +61,20 @@ namespace ApplicantTrackingSystem
                         "Later commits add login, registration, job browsing, applications, profile update, API sync, and the LuckyJob-inspired theme.";
             body.ForeColor = Color.FromArgb(21, 23, 28);
             card.Controls.Add(body);
+
+            Button btnLogin = new Button();
+            btnLogin.Text = "Login";
+            btnLogin.Width = 120;
+            btnLogin.Height = 40;
+            btnLogin.Location = new Point(50, 150);
+
+            btnLogin.Click += (s, e) =>
+            {
+                new LoginForm().Show();
+                this.Hide();
+            };
+
+            card.Controls.Add(btnLogin);
         }
     }
 }
