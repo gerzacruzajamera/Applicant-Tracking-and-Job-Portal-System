@@ -2,14 +2,19 @@ using System;
 
 namespace ApplicantTrackingSystem
 {
-    // Starter placeholder. Commit 04 replaces this file with the real API client.
+    // Starter placeholder. Will be replaced in later commits.
     public static class JobPortalApiClient
     {
         public const string BaseUrl = "http://localhost:8000/admin/php/api/";
 
+        public static bool IsReady()
+        {
+            return false; // starter mode
+        }
+
         public static string GetSetupNote()
         {
-            return "API client is not implemented in the starter. Follow Commit 04 in COMMIT_GUIDE_STEP_BY_STEP.md.";
+            return "API client is not implemented yet. Follow COMMIT 04 in COMMIT_GUIDE_STEP_BY_STEP.md.";
         }
     }
 }
