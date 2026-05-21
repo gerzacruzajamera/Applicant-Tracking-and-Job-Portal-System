@@ -13,7 +13,7 @@ namespace ApplicantTrackingSystem
             Application.SetCompatibleTextRenderingDefault(false);
 
             // START WITH LOGIN FORM
-            Application.Run(new LoginForm());
+            Application.Run(new StarterForm());
         }
     }
 
